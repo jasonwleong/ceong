@@ -1,0 +1,7 @@
+extends layout
+
+block content
+  h1= title
+  p Welcome to #{title}
+  canvas#myCanvas(width='650', height='450')
+  script(type='text/javascript', src='javascripts/draw.js')
