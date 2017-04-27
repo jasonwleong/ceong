@@ -3,14 +3,15 @@
 
 var c = document.getElementById("myCanvas");
 var ctx = c.getContext("2d");
+var value = local_data.value;
 
 var y = 200;
 var x = 0;
-var currentRed =  25;
-var currentGreen =  25;
-var currentBlue =  25;
+var currentRed =  22;
+var currentGreen =  22;
+var currentBlue =  22;
 var currentColor = rgb(currentRed, currentGreen, currentBlue);
-var radius = 40;
+var radius = value;
 
 window.requestAnimationFrame = window.requestAnimationFrame
     || window.mozRequestAnimationFrame
@@ -91,15 +92,15 @@ function checkBounds()
   {
     currentBlue--;
   }
-  if(currentRed < 20)
+  if(currentRed < 25)
   {
     currentRed++;
   }
-  if(currentGreen < 20)
+  if(currentGreen < 25)
   {
     currentGreen++;
   }
-  if(currentBlue < 20)
+  if(currentBlue < 25)
   {
     currentBlue++;
   }
@@ -123,29 +124,50 @@ function drunkColor()
   var drunkRed = 0;
   var drunkGreen = 0;
   var drunkBlue = 0;
-  if(Math.floor(Math.random()* 2) == 0)
+  if(Math.floor(Math.random()* 10) == 0)
   {
-    drunkRed = drunkRed - 2;
+    drunkRed = drunkRed + 22;
   }
   else
   {
-    drunkRed = drunkRed + 2;
+    if(Math.floor(Math.random()* 2) == 0)
+    {
+      drunkRed = drunkRed - 22;
+    }
+    else
+    {
+      drunkRed = drunkRed + 22;
+    }
   }
-  if(Math.floor(Math.random()* 2) == 0)
+  if(Math.floor(Math.random()* 10) == 0)
   {
-    drunkGreen = drunkGreen - 2;
+    drunkGreen = drunkGreen + 22;
   }
   else
   {
-    drunkGreen = drunkGreen + 2;
+    if(Math.floor(Math.random()* 2) == 0)
+    {
+      drunkGreen = drunkGreen - 22;
+    }
+    else
+    {
+      drunkGreen = drunkGreen + 22;
+    }
   }
-  if(Math.floor(Math.random()* 2) == 0)
+  if(Math.floor(Math.random()* 10) == 0)
   {
-    drunkBlue = drunkBlue - 2;
+    drunkBlue = drunkBlue + 22;
   }
   else
   {
-    drunkBlue = drunkBlue + 2;
+    if(Math.floor(Math.random()* 2) == 0)
+    {
+      drunkBlue = drunkBlue - 22;
+    }
+    else
+    {
+      drunkBlue = drunkBlue + 22;
+    }
   }
   currentRed = currentRed + drunkRed;
   currentGreen = currentGreen + drunkGreen;

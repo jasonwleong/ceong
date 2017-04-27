@@ -1,7 +1,7 @@
 extends layout
 
 block content
-  h1= title
-  p Welcome to #{title}
-  canvas#myCanvas(width='650', height='450')
-  script(type='text/javascript', src='javascripts/draw.js')
+    h1="Ceong"
+    form#formAddUser(name="Text",method="post",action="/adduser")
+        input#inputUserName(type="text", placeholder="text", name="text")
+        button#btnSubmit(type="submit") submit
